@@ -60,8 +60,8 @@ public class Store {
         return new OrderSlip(SName, ListSale, Detail);
     }
 
-    public int getQueue(int cusQ, int nowQ, int resQ) {
-        return getQueue(cusQ, nowQ, resQ);
+    public Queue showQueue(int cusQ, int nowQ, int restQ) {
+        return new Queue(cusQ, nowQ, restQ);
     }
 
     public void receiveOrder(String CName, String ListOrder, String Detail) {

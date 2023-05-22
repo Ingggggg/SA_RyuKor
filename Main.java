@@ -21,13 +21,18 @@ public class Main {
         // Receive order at store
         store.receiveOrder(orderSlip.getCName(), orderSlip.getListOrder(), orderSlip.getDetail());
 
+        // Show Queue to Customer
+        Queue q1 = store.showQueue(5, 3, 2);
+
+        // Display queue
+        System.out.println("Customer queue: " + q1.getCusQ());
+        System.out.println("Current queue: " + q1.getNowQ());
+        System.out.println("Rest queue: " + q1.getRestQ());
+
         // Sell food to customer
         store.saleFood(orderSlip.getCName(), orderSlip.getListOrder());
 
         // Get circulation of sales at store
         store.getCirculation(store.getName(), "List of sales");
-
-        // Get all queue
-        c1.getQueue(5, 3, 2);
     }
 }
