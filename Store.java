@@ -10,11 +10,11 @@ public class Store {
         SEmail = email;
     }
     
-    public String getSName() {
+    public String getName() {
         return SName;
     }
 
-    public void setSName(String sname) {
+    public void setName(String sname) {
         SName = sname;
     }
 
@@ -47,13 +47,13 @@ public class Store {
     }
 
     public void setLoginStatus(boolean loginStatus) {
-        SLoginStatus = true;
         SLoginStatus = loginStatus;
     }
 
     public void login(String email, String password) {
         SEmail = email;
         SPassword = password;
+        SLoginStatus = true;
     } 
 
     public OrderSlip orderslip(String SName, String ListSale, String Detail) {
@@ -74,7 +74,6 @@ public class Store {
 
     public void getCirculation(String SName, String ListSale) {
         this.SName = SName;
-
         //return "";
     }
 }
