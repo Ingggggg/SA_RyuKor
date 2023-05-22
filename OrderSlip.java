@@ -32,8 +32,4 @@ public class OrderSlip {
     public void setDetail(String detail) {
         Detail = detail;
     }
-
-    public String toString() {
-        return "Order Slip: " + CName + "\nList Order: " + ListOrder + "\nDetail: " + Detail;
-    }
 }

@@ -56,7 +56,7 @@ public class Store {
         SLoginStatus = true;
     } 
 
-    public OrderSlip orderslip(String SName, String ListSale, String Detail) {
+    public OrderSlip createOrderSlip(String SName, String ListSale, String Detail) {
         return new OrderSlip(SName, ListSale, Detail);
     }
 

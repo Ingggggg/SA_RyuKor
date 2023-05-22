@@ -1,50 +1,33 @@
 public class Main {
     public static void main(String[] args) {
-        // Create a customer
-        Customer customer = new Customer("John Doe", "john@example.com");
+        // Create customer
+        Customer c1 = new Customer("วีรภัทร สัปปพันธ์", "64050677@kmitl.ac.th");
 
-        // Register the customer
-        customer.register("john@example.com", "password123", "John Doe", "1234567890");
+        // Create store
+        Store store = new Store("ร้านลุงพจน์", "loongpoj@gmail.com");
 
-        // Login as the customer
-        customer.login("john@example.com", "password123");
+        // Order food from store
+        c1.orderFood(store.getName(), "ข้าวกะเพราหมูสับ", "เผ็ดน้อย");
 
-        // Check customer's login status
-        boolean customerLoggedIn = customer.getLoginStatus();
-        System.out.println("Customer login status: " + customerLoggedIn);
-
-        // Create a store
-        Store store = new Store("Super Mart", "store@example.com");
-
-        // Login as the store
-        store.login("store@example.com", "storepassword");
-
-        // Check store's login status
-        boolean storeLogedIn = store.getLoginStatus();
-        System.out.println("Store login status: " + storeLogedIn);
-
-        // Order food from the store
-        customer.orderFood(store.getName(), "Pizza", "double cheese");
-
-        // Create an order slip
-        OrderSlip orderSlip = store.orderslip(customer.getCNameAndLastName(), "Pizza", "double cheese");
+        // Create order slip
+        OrderSlip orderSlip = store.createOrderSlip(c1.getCNameAndLastName(), "ข้าวกะเพราหมูสับ", "เผ็ดน้อย");
 
         // Display order details
-        System.out.println("Order Slip:");
+        System.out.println("Order Slip");
         System.out.println("Customer Name: " + orderSlip.getCName());
         System.out.println("Order: " + orderSlip.getListOrder());
+        System.out.println("Detail: " + orderSlip.getDetail());
 
-        // Receive the order at the store
+        // Receive order at store
         store.receiveOrder(orderSlip.getCName(), orderSlip.getListOrder(), orderSlip.getDetail());
 
-        // Sell the food to the customer
+        // Sell food to customer
         store.saleFood(orderSlip.getCName(), orderSlip.getListOrder());
 
-        // Get the circulation of sales at the store
+        // Get circulation of sales at store
         store.getCirculation(store.getName(), "List of sales");
 
-        // Get the total queue
-        int queue = customer.getQueue(5, 3, 2);
-        System.out.println("Total queue: " + queue);
+        // Get all queue
+        c1.getQueue(5, 3, 2);
     }
 }

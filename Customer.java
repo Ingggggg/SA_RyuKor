@@ -75,9 +75,9 @@ public class Customer {
         } 
     }
 
-    public int getQueue(int cusQ, int nowQ, int resQ) {
-        return cusQ + nowQ + resQ;
+    public void getQueue(int cusQ, int nowQ, int resQ) {
+        System.out.printf("Customer queue: %d\n", cusQ);
+        System.out.printf("Current queue: %d\n", nowQ);
+        System.out.printf("Rest queue: %d\n", resQ);
     }
-
-
 }
