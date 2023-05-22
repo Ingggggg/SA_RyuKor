@@ -10,12 +10,12 @@ public class Store {
         SEmail = email;
     }
     
-    public String getName() {
+    public String getSName() {
         return SName;
     }
 
-    public void setName(String sname) {
-        SName = sname;
+    public void setSName(String SName) {
+        this.SName = SName;
     }
 
     public String getEmail() {
@@ -69,11 +69,12 @@ public class Store {
     }
 
     public void saleFood(String CName, String ListOrder) {
-
+        SaleFood saleFood = new SaleFood(SName, ListOrder);
+        saleFood.sendCirculation();
     }
 
     public void getCirculation(String SName, String ListSale) {
-        this.SName = SName;
-        //return "";
+        Circulation circulation = new Circulation(SName, ListSale);
+        circulation.showCirculation();
     }
 }

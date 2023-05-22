@@ -19,7 +19,7 @@ public class Main {
         Store s1 = new Store("ร้านลุงพจน์", "loongpoj@gmail.com");
 
         // Order food from store
-        c1.orderFood(s1.getName(), order, detail);
+        c1.orderFood(s1.getSName(), order, detail);
 
         // Create order slip
         OrderSlip orderSlip = s1.createOrderSlip(c1.getCNameAndLastName(), order, detail, 40);
@@ -27,13 +27,10 @@ public class Main {
         // Display order details
         System.out.println("\nOrder Slip");
         System.out.println("Customer Name: " + orderSlip.getCName());
-        System.out.println("Store Name: " + s1.getName());
+        System.out.println("Store Name: " + s1.getSName());
         System.out.println("Order: " + orderSlip.getListOrder());
         System.out.println("Detail: " + orderSlip.getDetail());
         System.out.println("Price: " + orderSlip.getPrice() + " บาท");
-
-        // Receive order at store
-        s1.receiveOrder(orderSlip.getCName(), orderSlip.getListOrder(), orderSlip.getDetail());
 
         // Show Queue to Customer
         Queue q1 = s1.showQueue(5, 3, 2);
@@ -45,10 +42,10 @@ public class Main {
         System.out.println("Rest queue: " + q1.getRestQ());
 
         // Sell food to customer
-        s1.saleFood(orderSlip.getCName(), orderSlip.getListOrder());
+        // s1.saleFood(orderSlip.getCName(), orderSlip.getListOrder());
 
         // Get circulation of sales at store
-        s1.getCirculation(s1.getName(), "List of sales");
+        s1.getCirculation(s1.getSName(), "-");
         
         in.close();
     }

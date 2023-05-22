@@ -70,7 +70,6 @@ public class Customer {
     public void orderFood(String SName, String FoodName, String Detail) {
         Store store = new Store(SName, "");
         if (store.getLoginStatus()) {
-            //OrderSlip orderSlip = store.orderslip(getCNameAndLastName(), FoodName, Detail);
             System.out.println("Order placed successfully!");
         } 
     }
