@@ -70,15 +70,14 @@ public class Customer {
     public void orderFood(String SName, String FoodName, String Detail) {
         Store store = new Store(SName, "");
         if (store.getLoginStatus()) {
-            // OrderSlip orderSlip = store.orderslip(getCNameAndLastName(), FoodName, Detail);
+            //OrderSlip orderSlip = store.orderslip(getCNameAndLastName(), FoodName, Detail);
             System.out.println("Order placed successfully!");
-        } else 
-            System.out.println("Store is not logged in. Please try again later.");
+        } 
     }
 
     public int getQueue(int cusQ, int nowQ, int resQ) {
-        return getQueue(cusQ, nowQ, resQ);
+        return cusQ + nowQ + resQ;
     }
 
-    
+
 }

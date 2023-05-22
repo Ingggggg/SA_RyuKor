@@ -25,11 +25,11 @@ public class OrderSlip {
         ListOrder = listorder;
     }
 
-    public String getDeatail() {
+    public String getDetail() {
         return Detail;
     }
 
-    public void setDeatail(String detail) {
+    public void setDetail(String detail) {
         Detail = detail;
     }
 

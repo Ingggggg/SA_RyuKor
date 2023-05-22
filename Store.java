@@ -64,7 +64,7 @@ public class Store {
         return getQueue(cusQ, nowQ, resQ);
     }
 
-    public void recieveOrder(String CName, String ListOrder, String Detail) {
+    public void receiveOrder(String CName, String ListOrder, String Detail) {
 
     }
 
