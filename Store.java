@@ -56,8 +56,8 @@ public class Store {
         SLoginStatus = true;
     } 
 
-    public OrderSlip createOrderSlip(String SName, String ListSale, String Detail) {
-        return new OrderSlip(SName, ListSale, Detail);
+    public OrderSlip createOrderSlip(String SName, String ListSale, String Detail, int Price) {
+        return new OrderSlip(SName, ListSale, Detail, Price);
     }
 
     public Queue showQueue(int cusQ, int nowQ, int restQ) {
