@@ -45,7 +45,7 @@ public class Main {
         // s1.saleFood(orderSlip.getCName(), orderSlip.getListOrder());
 
         // Get circulation of sales at store
-        s1.getCirculation(s1.getSName(), "-");
+        s1.getCirculation(s1.getSName(), order);
         
         in.close();
     }
